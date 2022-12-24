@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+*{
+    font-family: 'Roboto';
+}
+body, html{
+    height:100%;
+    margin: 0;
+}
+span{
+    font-weight: 600;
+}
+.container{
+    height:100%;
+    text-align: center;
+    /* padding:16px; */
+    color: white;
+    display:grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr;
+    gap:15px;
+}
+.container div{
+    padding: 10px;
+}
+/* top-right */
+.header{
+    grid-column: 2/4;
+    background-color: blue;
+}
+/* left side */
+.title{
+    display: flex;
+    font-size: 36px;
+    align-items: flex-end;
+    margin-left: 20px;
+    /* justify-content: center; */
+}
+.sidebar{
+    grid-area:1/1/4/1 ;
+    background-color: #22d3ee;
+}
+.sidebar > ul{
+    flex-direction: column;
+}
+.sidebar > ul,li{
+    font-size: 20px;
+    /* padding-left: 20px; */
+    display:flex;
+    grid-template-columns: 0.2fr 1fr;
+    /* justify-items: start; */
+    gap: 30px;
+}
+.top-items{
+    margin-top:5rem;
+}
+.bot-items{
+    margin-top:5rem;
+}
+/* articles */
+.projects{
+    grid-row:2/4;
+    background-color: green;
+}
+
+/* right-bottom */
+.trending{
+    background-color: rgb(0, 240, 252);
+}
+
+/* right-middle */
+.annoucements{
+    background-color:purple;
+}
