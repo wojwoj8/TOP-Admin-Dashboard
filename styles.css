@@ -2,6 +2,7 @@
 *{
     font-family: 'Roboto';
 }
+
 :root{
     
 }
@@ -14,10 +15,12 @@
 body, html{
     height:100%;
     margin: 0;
+    min-width: 900px;
 }
 span{
     font-weight: 600;
 }
+
 .container{
     height:100%;
     text-align: center;
@@ -34,21 +37,24 @@ span{
 /* top-right */
 .top-head{
     gap: 15px;
-    display:flex;
-    
+    display:flex; 
 }
 .next-to-avatar{
     text-align: left;
 }
 .top-head > input{
-    width: 50vw;
+    width: clamp(400px, 50%, 1000px);
     height:1.5rem;
     border-radius: 10px;
     border-color: #cbd5e1;
     background-color: #cbd5e1;
     border-width: 0;
+    
 }
-
+.top-head > svg{
+    min-width:24px;
+    max-width: 24px;
+}
 .header{
     grid-column: 2/4;
     background-color: blue;
