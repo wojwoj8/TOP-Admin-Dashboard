@@ -1,14 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
 *{
     font-family: 'Roboto';
 }
 
 :root{
+    --header-font-color:black;
     --font-color: white;
-    --sidebar-color: #22d3ee;
-    --header-color:  blue;
+    --sidebar-color: #1d4ed8;
+    --header-color:  white;
     --projects-color:  green;
     --annoucements-color: purple;
+    --background-color: #cbd5e1;
     --trending-color: rgb(0, 240, 252);
 }
 .avatar{
@@ -20,10 +22,14 @@
 body, html{
     height:100%;
     margin: 0;
-    min-width: 900px;
+    background-color: var(--background-color);
+    min-width: 1070px;
 }
 span{
     font-weight: 600;
+}
+svg{
+    cursor: pointer;
 }
 
 .container{
@@ -32,7 +38,7 @@ span{
     /* padding:16px; */
     color: var(--font-color);
     display:grid;
-    grid-template-columns: 1fr 4fr 2fr;
+    grid-template-columns: 1.5fr 4fr 2fr;
     grid-template-rows: 1fr 2fr 2fr;
     gap:15px;
 }
@@ -51,15 +57,15 @@ span{
 }
 
 .top-input > input{
-    width: max(400px, 45vw);
+    width: max(510px, 45vw);
     height:1.5rem;
     border-radius: 10px;
-    border-color: #cbd5e1;
-    background-color: #cbd5e1;
+    border-color: var(--background-color);
+    background-color: var(--background-color);
     border-width: 0;
     
 }
-.top-head > svg{
+.header svg{
     min-width:24px;
     max-width: 24px;
 }
@@ -78,16 +84,27 @@ span{
 .top-buttons{
     display:flex;
     gap:30px;
+    
+}
+.head-but{
     height:40px;
+    width:100px;
+    border-radius: 20px;
+    background-color: var(--sidebar-color);
+    color:var(--font-color);
+    font-weight: 600;
+    border-width: 0;
+    cursor:pointer;
 }
 .header{
+    color: var(--header-font-color);
     padding-right: 40px !important;
     grid-column: 2/4;
     background-color: var(--header-color);
 }
 /* left side */
 .title{
-    
+    cursor: pointer;
     padding-top:0 !important;
     gap:15px;
     display: flex;
@@ -111,6 +128,9 @@ span{
     grid-template-columns: 0.2fr 1fr;
     /* justify-items: start; */
     gap: 20px;
+}
+li > span{
+    cursor: pointer;
 }
 .top-items{
     margin-top:3rem;
