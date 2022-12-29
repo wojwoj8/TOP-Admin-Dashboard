@@ -4,7 +4,12 @@
 }
 
 :root{
-    
+    --font-color: white;
+    --sidebar-color: #22d3ee;
+    --header-color:  blue;
+    --projects-color:  green;
+    --annoucements-color: purple;
+    --trending-color: rgb(0, 240, 252);
 }
 .avatar{
     vertical-align: middle;
@@ -25,7 +30,7 @@ span{
     height:100%;
     text-align: center;
     /* padding:16px; */
-    color: white;
+    color: var(--font-color);
     display:grid;
     grid-template-columns: 1fr 4fr 2fr;
     grid-template-rows: 1fr 2fr 2fr;
@@ -35,15 +40,18 @@ span{
     padding: 10px;
 }
 /* top-right */
-.top-head{
+.top-head, .top-avatar, .top-input{
     gap: 15px;
+    padding-top: 0px !important;
     display:flex; 
+    align-items: center;
 }
-.next-to-avatar{
-    text-align: left;
+.top-head{
+    justify-content: space-between;
 }
-.top-head > input{
-    width: clamp(400px, 50%, 1000px);
+
+.top-input > input{
+    width: max(400px, 45vw);
     height:1.5rem;
     border-radius: 10px;
     border-color: #cbd5e1;
@@ -55,9 +63,27 @@ span{
     min-width:24px;
     max-width: 24px;
 }
+.top-bottom{
+    display:flex;
+    gap:10px;
+    align-items: center;
+    justify-content: space-between;
+}
+.top-avatar{
+    gap:20px;
+}
+.next-to-avatar{
+    text-align: left;
+}
+.top-buttons{
+    display:flex;
+    gap:30px;
+    height:40px;
+}
 .header{
+    padding-right: 40px !important;
     grid-column: 2/4;
-    background-color: blue;
+    background-color: var(--header-color);
 }
 /* left side */
 .title{
@@ -72,7 +98,7 @@ span{
 }
 .sidebar{
     grid-area:1/1/4/1 ;
-    background-color: #22d3ee;
+    background-color: var(--sidebar-color);
     padding-left: 0 !important;
 }
 .sidebar > ul{
@@ -95,15 +121,15 @@ span{
 /* articles */
 .projects{
     grid-row:2/4;
-    background-color: green;
+    background-color: var(--projects-color);
 }
 
 /* right-bottom */
 .trending{
-    background-color: rgb(0, 240, 252);
+    background-color: var(--trending-color);
 }
 
 /* right-middle */
 .annoucements{
-    background-color:purple;
+    background-color:var(--annoucements-color);
 }
